@@ -1,6 +1,6 @@
-# lfhooks
+# ffhooks
 
-LFHooks adds more hooks to featherframe.
+FFHooks adds more hooks to featherframe.
 
 ## hooks
 
