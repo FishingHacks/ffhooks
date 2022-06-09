@@ -1,7 +1,7 @@
 // put this into the public/pages folder after copying lfhooks into /packages
 
 import { useState, useEffect, html, render, rerender } from "/framework"
-import {useDocTitle, useGetOS, useLocalStorage, useId, useInterval, useToggle, useClipboard} from "../packages/lfhooks/index.js";
+import {useDocTitle, useGetOS, useLocalStorage, useId, useInterval, useToggle, useClipboard} from "../packages/lfhooks/hooks/index.js";
 
 render(()=>{
 const [visits, setVisits, removeVisits, clearVisits] = useLocalStorage(0, "visits")
