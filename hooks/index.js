@@ -5,6 +5,7 @@ import useId from "./useID.js";
 import useInterval from "./useInterval.js";
 import useToggle from "./useToggle.js";
 import useClipboard from "./useClipboard.js";
+import useQueue from "./useQueue.js";
 
 export {
     useLocalStorage,
@@ -13,5 +14,6 @@ export {
     useId,
     useInterval,
     useToggle,
-    useClipboard
+    useClipboard,
+    useQueue
 }

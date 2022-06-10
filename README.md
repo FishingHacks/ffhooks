@@ -61,5 +61,30 @@ function useInterval(()=>void, ms: number): [boolean, ()=>void, ()=>void, ()=>vo
 
 Typedef:
 ```ts
-function useToggle<T>(initialValue: T, choices: Array<T>): [T, ()=>void];
+function useToggle<T>(initialValue: T, choices: <any extends Array<T>>): [T/* State */, ()=>void/* toggle */];
+```
+
+### useQueue
+`useQueue(initialValue, size)` returns a value, that can hold sizes amount of elements, everything over that will get into the queue.
+It returns an Object containing:
+- The State (.state)
+- The Queue (.queue)
+- A Function to add Elements (.add)
+- A Function to update Elements, when supplied with a function it will call it with the state and queue merged (.update)
+- A Function to remove the first Element (.removeFirst)
+- A Function to clean the Queue
+
+Typedef:
+```ts
+function useQueue<T>(initialValue: <any extends Array<T>>, size: number): Queue
+
+interface Queue{state: Array<T>, queue: Array<T>, add: (T)=>void, update: (Array<T>|(values: Array<T>)=><any extends Array<T>>)=>void, removeFirst: ()=>void, cleanQueue: ()=>void}
+```
+
+### useDocTitle
+`useDocTitle(title)` is used to changing the document title.
+
+Typedef:
+```ts
+function useDocTitle(title: string): void;
 ```
