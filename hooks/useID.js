@@ -11,5 +11,5 @@ export default function useId(
     return `lfhooksidgen#${id}`;
   }
 ) {
-    return (id && typeof id == "string")?id:genIdFunc();
+    return (id && (typeof id == "string" || typeof id == "number"))?id.toString():genIdFunc();
 }

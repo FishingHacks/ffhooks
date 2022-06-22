@@ -6,6 +6,7 @@ import {useState} from "/framework";
  * @returns {[T ,()=>void]} the selected value and the function to toggle it
  */
 export default function useToggle(initialValue, values) {
+    if (values.length < 1) values = ["auto"]
     let initialIndex = values.indexOf(initialValue);
     if (initialIndex<0) initialIndex=0;
     if (initialIndex >= values.length) initialIndex=values.length-1;
